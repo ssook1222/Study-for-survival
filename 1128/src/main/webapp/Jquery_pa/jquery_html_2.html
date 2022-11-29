@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>HTML</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+	
+	<div id="origin">
+		<P><h1>hello world!</h1></P>
+	</div>
+	<div id="blank">
+	</div>
+		<button id="htmlBtn">get/set HTML</button>
+		<button id="textBtn">get/set text</button>
+		<button id="emptyBtn">EMPTY</button>
+		<button id="removeBtn">REMOVE</button>
+		
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			//remove와 empty의 차이 예제 
+			$("#emptyBtn").click(function() {
+				$("#origin").empty() //empty는 origin의 내용만 삭제
+				alert($("#origin").html())
+				//origin 영역의 내용만 삭제하므로 공백이 뜸, 즉 객체 자체는 남겨져 있음
+			})//click
+			
+			$("#removeBtn").click(function() {
+				$("#origin").remove() // remove는 origin 자체를 삭제
+				alert($("#origin").html())
+				//origin 영역(객체 자체를 삭제)을 날려버리므로 undefined가 발생, 객체 자체가 안 잡힘
+			})//click
+		})//ready
+		
+	</script>	
+	
+	<script type="text/javascript">
+		// 색상을 옮기는 예제	
+		// ready가 없지만, 일단 실행은 됨 -> but, 권장하지는 않음
+		$("#origin").css("background-color","pink");
+		$("#blank").css("background-color","skyblue"); //div에 내용이 없으면 색상이 보이지 않음
+		//css 영역에 값을 주는 메소드
+		
+		$(document).ready(function(){
+			$("#htmlBtn").click(function() {
+				$("#blank").html($("#origin").html())
+				alert($("#origin").html())
+				//html메소드도 세팅하는 것과 값을 가져오는 것 둘 다 수행
+				//모든 html 요소를 모두 가져와서 집어 넣음, 탭 키 - 엔터 키 - 공백 - 태그 다 가져옴
+			});//htmlBtn
+			$("#textBtn").click(function() {
+				alert($("#origin").text())
+				$("#blank").text($("#origin").text())
+				//text메소드도 세팅하는 것과 값을 가져오는 것 둘 다 수행
+				//text만 가져옴, 공백 - 엔터키 다 가져오긴 하되 태그 제외한 값 가져옴
+			});//textBtn
+		})
+		
+	</script>
+</body>
+</html>

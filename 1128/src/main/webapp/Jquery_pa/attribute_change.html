@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Attribute Method</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<img
+			id = "img1" 
+			alt="이미지 못 찾을 때 나오는 설명" 
+			title="이미지 위에 마우스 올라올 때 말풍선 설명" 
+			src="../img1.jpg">
+		<br>
+		<button id="imgChgBtn">이미지 변경</button>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#imgChgBtn").click(function() {
+					alert($("#img1").attr("src"))
+					$("#img1").attr("src","../img2.jpg")
+				})
+				//attr : html element의 속성(attribute)을 가져오거나, 입력하는 함수
+				//prop : html element의 property를 가져오거나 입력하는 함수
+				//(원칙적으로는 attribute가 아닌 element의 값에 접근)
+				//실제로는 두 개의 경계가 모호해서 주의가 필요
+				
+				//attr은 속성 값만 가져오고, prop은 전체 경로를 가져옴
+				
+				//실행 순서는 먼저 되긴 하나, 결과가 나오는 건 처리가 빨리 끝나는 순임.
+			});
+		</script>
+		
+		<hr>
+		
+		<input type="checkbox" id="chBox1"> 과일이 좋다.
+		<button id="chBtn">체크 박스 상태 확인</button>
+		<input type="checkbox"> 
+		<input type="checkbox"> 
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#chBtn").click(function() {
+					alert("js "+chBox1.checked)
+					alert("attr "+$("#chBox1").attr("checked"))
+					alert("prop "+$("#chBox1").prop("checked"))
+					
+					if($("#chBox1").prop("checked")==false){
+						$("#chBox1").prop("checked","checked")
+						$(":checkbox").prop("checked","checked")
+						//체크박스 타입 전체를 체크하고, 안 할 때
+					}
+					
+					else{
+						$("#chBox1").prop("checked","")
+						$(":checkbox").prop("checked","")
+					}
+					//prop은 attr 대체 가능
+					
+				})//click
+			})//ready
+		</script>
+		<hr>
+		
+		
+		
+	</body>
+</html>

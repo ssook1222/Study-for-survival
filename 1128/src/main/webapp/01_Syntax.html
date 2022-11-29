@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Hungry</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){ //function : 함수, 기능 수행의 단위
+						//이름이 있으면 이름있는 함수, 없으면 익명함수
+			alert(123); //문서 로딩 완료 시점에 실행
+				//$("접근하고자 하는 대상").action; 기본 형태
+				//ctrl+space
+			$("#btn1").click(function(){ //문서 로딩 완료 시점에 준비 완료 + 클릭 시 익명함수를 실행해라
+				alert($("#btn1").text());
+			})
+		}); //문서 로딩이 끝난 시점, 문서가 로딩 완료되면 이 함수를 수행하거나 수행할 준비를 하시오.
+	</script>
+	
+	<hr>
+	
+	<button id="btn1">Access Test</button>
+	
+	<script>
+	
+	</script>
+</body>
+</html>

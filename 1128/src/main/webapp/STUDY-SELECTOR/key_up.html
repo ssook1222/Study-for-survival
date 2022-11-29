@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>key</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+	<script> 
+			//키보드를 통해 전달되는 코드는 다 숫자로 변경됨
+			$(document).ready(function(){
+				$("#test").keyup(function(){
+					// alert(event.keyCode); //키이벤트가 일어난 곳에 코드를 잡아내는 기능
+					if(event.keyCode == 13){
+						alert("엔터키")
+					}
+				});
+			}); 	
+	</script>
+	<input type="text" id="test">
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>prepend</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	
+		<style type="text/css">
+			.cls1{
+				color:red;
+				background-color:yellow;
+			}
+		</style>
+		
+	</head>
+	<body>
+	
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#appBtn").click(function() {
+					$("ul").append("<li>peach</li>")
+					//뒤에 붙고
+				})
+				
+				$("#preBtn").click(function() {
+					$("ul").prepend("<li>mango</li>")
+					//앞에 붙고
+				})
+			})
+		</script>
+		
+		<ul>
+			<li class="cls1">apple</li>
+			<li>banana</li>
+			<li id="li3" class="cls1">cherry</li>
+		</ul>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#remBtn").click(function() {
+					$("#li3").removeClass();
+				})//click
+				
+				$("#addBtn").click(function() {
+					$("#li3").addClass("cls1");
+				})//click
+			})//ready
+		
+		</script>
+		
+		<button id="appBtn">append</button>
+		<button id="preBtn">prepend</button>
+		<button id="addBtn">addClass</button>
+		<button id="remBtn">removeClass</button>
+		
+	</body>
+</html>

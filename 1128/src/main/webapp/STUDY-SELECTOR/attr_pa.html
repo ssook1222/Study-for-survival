@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Attribute_practice</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			//$("input").css("background-color","gray");
+			
+			//$("input[id]").css("background-color","gray");
+			//input 타입 중 특정 값을 가진 것만 색상을 바꾸겠다는 의미
+			//id라는 속성을 가진 것이 1개밖에 없음. id를 가진 것만 변경됨.
+			
+			//$("input[type=button]").css("background-color","gray");
+			//id가 아니라 type이 버튼인 것만 색상을 변경
+			
+			//$("input[value$='llo']]").css("background-color","gray");
+			//끝나는 값이 llo인 것만 찾아서 색상을 변경
+			
+			//$("input[value~='345']]").css("background-color","gray");
+			//hello가 포함된 것만 찾아서 색상을 변경
+			
+			//$(":text").css("background-color","dark-grey");
+			//text 필드만 색상 변경
+			
+		});
+	</script>
+	<input type="text" id="txt1" value="hello">
+	<input type="text" id="txt2" value="read only field">
+	<input type="password" value="12 345 678">
+	<input type="button" value="테스트 버튼">
+	
+</body>
+</html>

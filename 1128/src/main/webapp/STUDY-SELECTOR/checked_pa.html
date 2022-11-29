@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Checked</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+	
+</head>
+<body>
+	<script> 
+			$(document).ready(function(){
+				$("select").change(function(){
+					alert($(":selected").text());
+				}); //선택된 값이 바뀜
+			}); 
+			
+			$(document).ready(function(){
+				$(":checkbox").click(function(){
+					alert($(":checked").val());
+				});
+			}); 
+			//fuction이 준비되었으면 이와 같은 기능을 수행할 수 있다는 의미
+			
+</script>
+	
+	
+	<hr>
+	<input type="checkbox" id="chb1" value="orange">orange
+	<input type="checkbox" id="chb2" value="apple">apple
+
+	<hr>
+	
+	<select>
+				<option>apple</option>
+				<option>banana</option>
+				<option>orange</option>
+	</select>
+	
+
+</body>
+</html>

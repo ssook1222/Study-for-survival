@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>On_PA</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<button>document button</button>
+		<button>alert test button</button>
+		
+		<div id="div1"></div>
+		
+		<script type="text/javascript">
+			let idx = 1;
+			$(document).ready(function(){
+				$("button").click(function(){
+					alert($(this).text());
+					// ** 현재 이벤트가 발생한 객체를 this로 지칭
+					//이 버튼 태그가 열린 곳에서부터 닫힌 곳까지의 text
+					if($(this).text()=='document button'){
+						//특정 영역에 버튼을 추가하기 위한 작업, 특정 영역을 만들어주면 됨
+						$("#div1").append(
+							"<button id='madeBtn"+idx+"'>made by jquery button</button><br>"		
+						); // 버튼을 append, 이 때 버튼은 이벤트가 없음. 그래서 이벤트를 하나씩 달아줘야 함.
+						//특정 영역 선정 후 추가하는 작업
+						$("#madeBtn"+idx).on("click", function(){
+							//...madeBtn이 clear되었을 때 alert를 추가
+							alert($(this).attr("id"));
+						}); //on
+						idx++;
+					}
+				}); //click -> 끝나는 위치를 기록		
+			}) //ready
+			//이벤트 리스너라는 개념이 추가, 나중에 만들어지는 건 그게 없음.
+			//어떤 이벤트에 어떤 동작을 해야 되는지 on 메소드로 지정해줘야 함.
+			//id가 생성될 떄마다 각각의 id를 가져가는 게 좋음.
+			
+			//jquery로 데이터 가져와서 뿌릴 때 이러한 on 작업 필요함.
+		</script>
+	</body>
+</html>

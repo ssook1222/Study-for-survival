@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Whole</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	</head>
+	<body>
+		
+		<script>
+			$(document).ready(function(){
+				$("*").css("background-color","skyblue"); //모든 요소의 배경색이 하늘색
+				$("body").css("background-color","#C8FFFF"); // body라는 html 요소 selector
+				$("#txt1").css("background-color","#EBFBFF"); //id selector
+				$(".class1").css("background-color","white"); //class selector
+				
+				
+			}); 
+			
+			//Jquery 함수 : css style을 변경할 수 있는 함수 사용
+			//class - 이름은 다른데 종류는 같음
+		</script>
+		<hr>
+		<input type = "text" id = "txt1">
+		<hr>
+		<input type = "text" id = "txt2">
+		<hr>
+		<input type = "text" id = "txt3" class="class1"> 
+		<hr>
+		<input type = "text" id = "txt4">
+		<hr>
+		<input type = "text" id = "txt5" class="class1">
+	</body>
+</html>

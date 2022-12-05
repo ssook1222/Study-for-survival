@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cookie pop</title>
+</head>
+<body bgcolor="pink">
+	<h1>팝업 화면 입니다.</h1>
+	<input type="checkbox" id="chb1" onclick="close24();"> 24시간 동안 팝업 닫기
+	<script type="text/javascript">
+	function close24() {
+		let now = new Date();
+		//alert( now );
+		//alert( now.getDate() );
+		//alert( now.getDate() + 1 );
+		now.setDate( now.getDate() + 1 );
+		//alert( now );
+		document.cookie = "notOpenPop=true;path=/;expires=" + now.toGMTString();
+		document.cookie = "test=true;path=/;expires=" + now.toGMTString();
+		window.close();
+	}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

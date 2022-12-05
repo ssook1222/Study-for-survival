@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>param</title>
+</head>
+<body>
+
+	<form method="get" action="./Param01">
+		<!-- method : 전송 방법, 기본이 get -->
+		<!-- action : 서버주소/프로그램id -->
+		text : <input type="text" id="name" name="name">
+		<hr>
+		hidden text : <input type="hidden" id="hid_txt" name="hid_txt">
+		<hr>
+		password : <input type="password" id="pwd" name="pwd">
+		<hr>
+		성별 : <input type="radio" id="rdo1" name="gender" value="female"> 여성
+		<input type="radio" id="rdo2" name="gender" value="male"> 남성
+		<hr>
+		<select id="sel1" name="sel1">
+			<option value="apple">apple</option>
+			<option value="banana">banana</option>
+			<option value="chery">cherry</option>
+		</select>
+		<hr>
+		<select id="sports" name="sports" multiple="multiple">
+			<option value="soccer">soccer</option>
+			<option value="baseball">baseball</option>
+			<option value="volleyball">volleyball</option>
+		</select>
+		<hr>
+		<hr>
+		<hr>
+		<input type="submit" value="데이터 전송">
+	</form>
+
+</body>
+</html>

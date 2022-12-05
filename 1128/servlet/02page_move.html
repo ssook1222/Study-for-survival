@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>page_move</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//alert("!!");
+	//location.href="http://www.naver.com/";
+	function callServer() {
+		//form1.action = "./Refresh02";
+		//form1.action = "./LocationHref03";
+		//form1.action = "./SendRedirect04";
+		form1.action = "./Forward05";
+		//form1.action = "./Include06";
+		form1.submit();
+	}
+	</script>
+	<form id="form1">
+		<input type="text" id="txt1" name="txt1" value="This is data from client.">
+		<button type="button" onclick="callServer();">data send</button>
+	</form>
+</body>
+</html>

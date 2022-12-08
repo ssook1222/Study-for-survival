@@ -13,6 +13,7 @@
 	<h5><%= request.getAttribute("addData1") %></h5>
 	<% request.setAttribute("addData2", "this is add Data2!"); %>
 	<%-- 데이터를 보내서 다른 jsp파일에 출력하는 거 가능 --%>
+	<% int iVar08 = 888; %>
 	<h3>08include3 END</h3>
 	
 	</body>

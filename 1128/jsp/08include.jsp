@@ -11,7 +11,9 @@
 	
 	<script type="text/javascript">
 	function callServer() {
-		form1.action = "./08include2.jsp";
+		//form1.action = "./08include2.jsp";
+		//form1.action = "./09jsp_action_include2.jsp";
+		form1.action = "./10jsp_action_forward2.jsp";
 		form1.submit();
 	}
 	</script>

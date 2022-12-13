@@ -18,7 +18,7 @@
 		<h1>and : ${ true and true } : ${ true and false } : ${ false and true } : ${ false and false }</h1>
 		<h1>or : ${ true or true } : ${ true or false } : ${ false or true } : ${ false or false }</h1>
 		<h1>not : ${ !true } : ${ not true }</h1>
-		<h1>3항 연산자 (1 < 3)? : ${ (1 < 3)? "참" : "거짓" }</h1>
+		<h1>3항 연산자 (1 > 3)? : ${ (1 > 3)? "참" : "거짓" }</h1>
 	</body>
 </html>
 

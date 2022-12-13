@@ -12,7 +12,7 @@
 		<hr>
 		<h1>c:if - 단일 if문(else if 또는 else 표현이 없다.)</h1>
 		<h2>c:if test="${ testBool == false }" : if(testBool == false)</h2>
-		<c:set var="testBool" value="false" />
+		<c:set var="testBool" value="true" />
 		<!-- testBool의 값을 true/false 바꾸면서 테스트 해보세요. -->
 		<c:if test="${ testBool == false }">
 			<h2><font color="red"> 거짓 말 </font></h2>

@@ -23,7 +23,7 @@
 		<h3>fn:replace(str, "You", "U~~") : ${ fn:replace(str, "You", "U~~") }</h3>
 		<h3>fn:substring(str, 3, 11) : ${ fn:substring(str, 3, 11) }</h3>
 		<hr>
-		<h3>fn:indexOf(str, "To") : ${ fn:indexOf(str, "To") }</h3>
+		<h3>fn:indexOf(str, "You") : ${ fn:indexOf(str, "To") }</h3>
 		<h3>fn:startsWith(str, "Ni") : ${ fn:startsWith(str, "Ni") }</h3>
 		<h3>fn:endsWith(str, "o.") : ${ fn:endsWith(str, "o.") }</h3>
 		<hr>

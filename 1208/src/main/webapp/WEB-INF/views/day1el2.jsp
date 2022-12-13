@@ -20,7 +20,6 @@
 		<h1>${ messageFromSession }</h1>
 		<hr>
 		<h1>글번호 : ${ free_board_dto.getBno() }</h1>
-		<h1>글번호 : ${ free_board_dto.bno() }</h1>
 		<h1>글제목 : ${ free_board_dto.btitle }</h1>
 		<h1>작성자 : ${ free_board_dto.bwriter }</h1>
 		<h1>작성일 : ${ free_board_dto.bdate }</h1>

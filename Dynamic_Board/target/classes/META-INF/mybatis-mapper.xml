@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="BoardMapper">
+
+	<select id="selectAllBoard" resultType="kr.co.kico.home.BoardDTO"> 
+		select a.bno
+			   , a.btitle
+			   , a.bwriter
+			   , a.bcnts
+			   , a.bpwd
+			   , a.bdate
+			   , a.mno
+		from board a
+		order by a.bdate desc
+	</select>
+	
+	<select id="selectAllText" resultType="kr.co.kico.home.BoardDTO"> 
+		select a.mname
+			   , a.mno
+		from menu a
+	</select>
+	
+	<select id="detail" parameterType="java.lang.String" resultType="kr.co.kico.home.BoardDTO"> 
+		select a.bno
+			   , a.btitle
+			   , a.bwriter
+			   , a.bcnts
+			   , a.bpwd
+			   , a.bdate
+			   , a.mno
+		from board a
+		where bno = #{bno}
+	</select>
+	
+	<insert id="insMenu" parameterType="kr.co.kico.home.BoardDTO">
+        INSERT INTO menu ( mno
+                           , mname
+                          )
+        VALUES ( seq_menu_no.nextval
+               , #{mname}
+               )
+    </insert>
+	
+	<update id="updateMenu" parameterType="java.lang.String">
+		update menu set
+			   mname=#{mname}
+		where mno=#{mno}
+	</update>
+	
+	<select id="selectMenu" parameterType="java.lang.String" resultType="kr.co.kico.home.BoardDTO"> 
+		select a.bno
+			   , a.btitle
+			   , a.bwriter
+			   , a.bcnts
+			   , a.bpwd
+			   , a.bdate
+			   , a.mno
+		from board a
+		where mno = #{mno}
+	</select>
+	
+	<insert id="insBoard" parameterType="kr.co.kico.home.BoardDTO">
+        INSERT INTO board ( bno
+			   				, btitle
+			   				, bwriter
+			   				, bcnts
+			   				, bpwd
+			   				, bdate
+			   				, mno
+                          )
+        VALUES ( seq_board_no.nextval
+               	, #{btitle}
+               	, #{bwriter}
+               	, #{bcnts}
+               	, #{bpwd}
+               	, sysdate
+               	, #{mno}
+               )
+    </insert>
+	
+</mapper>
+
+<!-- create sequence seq_menu_no
+start with 1
+increment by 1
+maxvalue 99999
+nocycle;
+
+create sequence seq_board_no
+start with 1
+increment by 1
+maxvalue 99999
+nocycle; -->

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="BoardMapper">
+	<select id="selectAllBoard" resultType="kr.co.kico.dto.BoardDTO"> 
+		select a.bno
+			   , a.btitle
+			   , a.mno
+			   , a.bcnts
+			   , a.bdate
+			   , a.menuno
+               , b.menuaccess
+		from board a, menu b
+		where a.menuno = b.menuno
+		order by a.bdate desc
+		OFFSET(0) ROWS FETCH FIRST 20 ROWS ONLY
+	</select>
+	
+	<select id="selectAllMenu" resultType="kr.co.kico.dto.BoardDTO"> 
+		select a.menuno
+			   , a.menuname
+			   , a.menuaccess
+		from menu a
+		order by a.menuno
+	</select>
+	
+	<select id="detail" parameterType="java.lang.String" resultType="kr.co.kico.dto.BoardDTO"> 
+		select a.bno
+			   , a.btitle
+			   , a.mno
+			   , a.bcnts
+			   , a.bdate
+			   , a.menuno
+               , b.mname
+		from board a, board_member b
+		where a.mno = b.mno and bno = #{bno}
+	</select>
+	
+	<select id="selectMatchBoard" parameterType="java.lang.String" resultType="kr.co.kico.dto.BoardDTO"> 
+		select a.bno
+			   , a.btitle
+			   , a.mno
+			   , a.bcnts
+			   , a.bdate
+			   , a.menuno
+		from board a
+		where menuno = #{menuno}
+	</select>
+	
+	<insert id="insBoard" parameterType="kr.co.kico.dto.BoardDTO">
+        INSERT INTO board ( bno
+			   				, btitle
+			   				, mno
+			   				, bcnts
+			   				, bdate
+			   				, menuno
+                          )
+        VALUES ( db_seq_bno.nextval
+               	, #{btitle}
+               	, #{mno}
+               	, #{bcnts}
+               	, sysdate
+               	, #{menuno}
+               )
+    </insert>
+    
+    <delete id="delBoard" parameterType="kr.co.kico.dto.BoardDTO">
+    	delete from board
+    	where bno=#{bno}
+    </delete>
+    
+    <update id="updateBoard" parameterType="kr.co.kico.dto.BoardDTO">
+    	update board
+    	set btitle=#{btitle} 
+    	    , bcnts=#{bcnts} 
+    	    , menuno=#{menuno}
+    	where bno = #{bno}
+    </update>
+	
+	<select id="Login" parameterType="kr.co.kico.dto.BoardDTO" resultType="kr.co.kico.dto.BoardDTO"> 
+		select mno
+			   , mid
+			   , mname
+			   , mgno
+		from board_member
+		where mid = #{mid} and mpwd = #{mpwd}
+	</select>
+	
+	<select id="idDupCheck" parameterType="java.lang.String" resultType="int">
+		select count(mid) idCnt from board_member where mid = #{mid}
+	</select>
+	
+	<insert id="signup" parameterType="kr.co.kico.dto.BoardDTO">
+        INSERT INTO board_member(mno, mid, mpwd, mname, mgno)
+        VALUES(db_seq_mno.NEXTVAL, #{mid}, #{mpwd}, #{mname}, 1)
+    </insert>
+	
+</mapper>
+
+<!-- create sequence db_seq_bno
+start with 1
+increment by 1
+maxvalue 99999
+nocycle; -->
+
+<!-- create sequence db_seq_menuno
+start with 1
+increment by 1
+maxvalue 99999
+nocycle; -->
+
+<!-- create sequence db_seq_mno
+start with 1
+increment by 1
+maxvalue 99999
+nocycle; -->
+
+<!-- mgno는 따로 insert, 넣을 때 +10하는 느낌으로 넣으면 될 듯 -->
+

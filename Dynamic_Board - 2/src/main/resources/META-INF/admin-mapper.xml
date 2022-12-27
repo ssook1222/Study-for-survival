@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="AdminMapper">
+	<select id="selectAllMenu" resultType="kr.co.kico.dto.BoardDTO"> 
+		select a.menuno
+			   , a.menuname
+			   , a.menuaccess
+               , b.mgname
+               , b.mgno
+		from menu a, member_group b
+        where a.menuaccess = b.menuaccess
+		order by a.menuno
+	</select>
+	
+	<update id="updateMenu" parameterType="kr.co.kico.dto.BoardDTO">
+    	update menu
+    	set menuname = #{menuname}
+    	    , menuaccess = #{menuaccess} 
+    	where menuno = #{menuno}
+    </update>
+    
+    <delete id="deleteMenu" parameterType="kr.co.kico.dto.BoardDTO">
+    	delete from menu
+    	where menuno=#{menuno}
+    </delete>
+    
+    <delete id="deleteBoard" parameterType="kr.co.kico.dto.BoardDTO">
+    	delete from board
+    	where menuno=#{menuno}
+    </delete>
+    
+    <insert id="insertMenu" parameterType="kr.co.kico.dto.BoardDTO">
+        INSERT INTO menu ( menuno
+                           , menuname
+                           , menuaccess
+                          )
+        VALUES ( db_seq_menuno.nextval
+               , #{menuname}
+               , 1
+               )
+    </insert>
+	
+	<select id="selectAllMember" resultType="kr.co.kico.dto.BoardDTO"> 
+		select a.mno 
+			   , a.mgno
+			   , a.mname
+			   , a.mid
+			   , b.mgname
+		from board_member a, member_group b
+		where b.mgno = a.mgno
+		order by a.mno
+	</select>
+	
+	<update id="updateMember" parameterType="kr.co.kico.dto.BoardDTO">
+    	update board_member
+    	set mgno = #{mgno}
+    	where mid = #{mid}
+    </update>
+    
+    <delete id="deleteMember" parameterType="kr.co.kico.dto.BoardDTO">
+    	delete from board_member
+    	where mid=#{mid}
+    </delete>
+	
+	<select id="selectAllMgname" resultType="kr.co.kico.dto.BoardDTO"> 
+		select a.mgname
+			   , a.mgno
+			   , a.menuaccess
+		from member_group a
+		order by a.mgno
+	</select>
+	
+	<select id="selectAllMgAccessList" resultType="kr.co.kico.dto.BoardDTO"> 
+		select a.menuaccess
+		from menuaccess_list a
+		order by a.menuaccess
+	</select>
+	
+	<update id="updateGroup" parameterType="kr.co.kico.dto.BoardDTO">
+    	update member_group
+    	set menuaccess = #{menuaccess}
+    		, mgname = #{mgname}
+    	where mgno = #{mgno}
+    </update>
+    
+    <update id="updateGroupWithMember" parameterType="kr.co.kico.dto.BoardDTO">
+    	update board_member
+    	set mgno = #{menuaccess}
+    	where mgno = #{mid}
+    </update>
+    
+    <delete id="deleteGroup" parameterType="kr.co.kico.dto.BoardDTO">
+    	delete from member_group
+    	where mgno=#{mgno}
+    </delete>
+    
+    <update id="deleteGroupWithMember" parameterType="kr.co.kico.dto.BoardDTO">
+    	update board_member
+    	set mgno = 1
+    	where mgno = #{mid}
+    </update>
+    
+    <insert id="insertMemberGroup" parameterType="kr.co.kico.dto.BoardDTO">
+        INSERT INTO member_group ( mgno
+			   				, mgname
+			   				, menuaccess
+                          )
+        VALUES ( #{menuaccess}
+               	, #{mgname}
+               	, #{menuaccess}
+               )
+    </insert>
+	
+	<select id="groupDupCheck" parameterType="java.lang.String" resultType="int">
+		select count(menuaccess) groupCnt from member_group where menuaccess = #{menuaccess}
+	</select>
+	
+</mapper>
+
+<!-- create sequence db_seq_bno
+start with 1
+increment by 1
+maxvalue 99999
+nocycle; -->
+
+<!-- create sequence db_seq_mgno
+start with 1
+increment by 1
+maxvalue 99999
+nocycle; -->
+
+<!-- create sequence db_seq_menuno
+start with 1
+increment by 1
+maxvalue 99999
+nocycle; -->
+
+<!-- create sequence db_seq_mno
+start with 1
+increment by 1
+maxvalue 99999
+nocycle; -->
+
+<!-- mgno는 따로 insert, 넣을 때 +10하는 느낌으로 넣으면 될 듯 -->
+

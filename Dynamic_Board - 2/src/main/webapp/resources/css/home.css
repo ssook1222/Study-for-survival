@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body{
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	width:100%
+}
+
+#logo{
+	text-decoration:none;
+	color:black;
+}
+
+.title{
+	font-weight:bold;
+}
+
+#signBtn{
+	float:right
+}
+
+#loginBtn{
+	float:left
+}

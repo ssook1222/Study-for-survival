@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	
+	<mappers>
+		<mapper resource="META-INF/mybatis-mapper.xml" />
+		<mapper resource="META-INF/admin-mapper.xml" />
+	</mappers>
+
+</configuration>
+
+<!-- 이 mapper 기반으로 쿼리를 세팅하겠다는 의미 -->

@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 ```
 
-![img.png](img.png)
+![img.png](https://github.com/ssook1222/Study-for-survival/blob/master/1128/readme_img/img.png)
 
 ---
 
@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 = 부모 하위에 있는 요소들 중 자식 요소가 있으면 보여줌.
 
-![img_1.png](img_1.png)
+![img_1.png](https://github.com/ssook1222/Study-for-survival/blob/master/1128/readme_img/img_1.png)
 
 ```jsx
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

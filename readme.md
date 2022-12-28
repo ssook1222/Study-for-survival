@@ -17,10 +17,10 @@
 - jsp 구조
 - html / css 기초 지식
 
-`학습내용 정리`      
+`학습내용 정리목록`      
 #### [jquery - sibling selector](https://github.com/ssook1222/Study-for-survival/tree/master/1128/jquery/jquery_selector.md)
 #### [servlet - redirect / forward / include](https://github.com/ssook1222/Study-for-survival/tree/master/1128/servlet/servlet_redirect_forward_include.md)
-
+#### [jdbc](https://github.com/ssook1222/Study-for-survival/tree/master/1128/servlet/jdbc.md)
 
 
 ---

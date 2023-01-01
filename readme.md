@@ -25,7 +25,8 @@
 |servlet|[redirect / forward / include](https://github.com/ssook1222/Study-for-survival/tree/master/1128/servlet/servlet_redirect_forward_include.md)|
 |servlet|[jdbc](https://github.com/ssook1222/Study-for-survival/tree/master/1128/servlet/jdbc.md)|
 |servlet|[jsp_tag](https://github.com/ssook1222/Study-for-survival/tree/master/1128/servlet/jsp_tag.md)
-servlet|[request / session / application](https://github.com/ssook1222/Study-for-survival/tree/master/1128/servlet/req_session_app.md)
+|servlet|[request / session / application](https://github.com/ssook1222/Study-for-survival/tree/master/1128/servlet/req_session_app.md)
+|servlet|[usebean / web-xml /custom tag / Dynamic Attribute](https://github.com/ssook1222/Study-for-survival/tree/master/1128/servlet/usebean_webXml_customTag_DynamicAttr.md)
 
 
 ---

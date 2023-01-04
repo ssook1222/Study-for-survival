@@ -75,7 +75,7 @@ MemberVO myMember = new MemverVO();
       (getParameter가 아니라 **세팅된 DTO/VO를 받게 됨**)
 
 
-![img_3.png](img_3.png)
+![md_img/img_3.png](md_img/img_3.png)
 
 ---
 
@@ -139,7 +139,7 @@ jsp에서 제공하는 액션 태그가 그렇게 많지 않기 때문에 개발
 
 ### Web-XML 사용하기
 
-![img_4.png](img_4.png)
+![md_img/img_4.png](md_img/img_4.png)
 
 - 클래스를 지정하는 servlet 선언과 그 클래스에 대한 URL을 지정하는 servlet-mapping 선언이 있음
 - 웹 앱 안쪽에 servlet을 지정 가능함. name의 경우, 이 web-xml에서 사용하는 이름으로 servlet-mapping에도 name이 있음.

@@ -164,7 +164,7 @@ request를 servlet1이 받음 → 그 요청을 servlet2한테 전달 (request d
 
 `forward`
 
-![img_1.png](img_1.png)
+![md_img/img_1.png](md_img/img_1.png)
 
 일반적인 태그에서는 forward가 없음.
 
@@ -182,7 +182,7 @@ servlet2에서 response를 원래 요청했던 곳으로 전달
 
 `include`
 
-![img_2.png](img_2.png)
+![md_img/img_2.png](md_img/img_2.png)
 
 request dispatcher도 `response`과 `request`을 공유함
 

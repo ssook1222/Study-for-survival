@@ -49,7 +49,8 @@
 |주제|링크|
 |------|---|
 |maven 기초|[maven_basic](https://github.com/ssook1222/Study-for-survival/tree/master/1208/spring/maven_basic.md)|
-|STS / Spring & maven / Mybatis 기초|[STS / Spring & maven / Mybatis](https://github.com/ssook1222/Study-for-survival/tree/master/1208/spring/STS_springMaven_Mybatis.md|Spring 기초|[Spring_basic](https://github.com/ssook1222/Study-for-survival/tree/master/1208/spring/spring_basic.md)|
+|STS / Spring & maven / Mybatis 기초|[STS / Spring & maven / Mybatis](https://github.com/ssook1222/Study-for-survival/tree/master/1208/spring/STS_springMaven_Mybatis.md)|
+Spring 기초|[Spring_basic](https://github.com/ssook1222/Study-for-survival/tree/master/1208/spring/spring_basic.md)|
 
 ---
 

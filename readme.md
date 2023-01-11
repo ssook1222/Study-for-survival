@@ -66,6 +66,8 @@
 
 #### sign_up_backup
 
+[해당 레포지토리로 이동](https://github.com/ssook1222/Study-for-survival/tree/master/sign_up_backup)
+
 `소개`    
 회원가입, 로그인 기능을 구현했던 과제
 

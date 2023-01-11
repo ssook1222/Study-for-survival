@@ -1,6 +1,6 @@
-package kr.co.kico.mywork;
+package kr.co.kico.mywork.signup;
 
-public class LoginDTO {
+public class SignupDTO {
 
 	private String mno;
 	private String mid;

@@ -1,15 +1,16 @@
 
-## 🌟 Study for survival
+# 🌟 Study for survival
 
-### 📍 개발 초보의 spring, jsp 적응기
+ 📍 개발 초보의 spring, jsp 적응기
 
 ----
 
-### 목차
+## 목차
 
-[folder 1128 설명](#1128)    
-[folder 1208 설명](#1208)    
-[folder Sign_up_backup 설명](#sign_up_backup)
+### - [1128 설명](#1128)    
+###  - [1208 설명](#1208)    
+### - [Sign_up_backup 설명](#sign_up_backup)    
+### - [동적게시판 프로젝트 설명](#Dynamic-Board-Project)
 
 ---
 
@@ -97,6 +98,33 @@
 
 ---
 
+#### Dynamic Board Project
 
-* 각 폴더와 수행한 업무 등 상세 내용은 추후 업데이트 될 예정입니다.
+[해당 레포지토리로 이동](https://github.com/ssook1222/Study-for-survival/tree/master/Dynamic_Board)
+
+
+`소개`
+게시판을 자유롭게 생성할 수 있고, 그 생성된 게시판에 게시글을 작성할 수 있게끔 하는 동적게시판 구현 과제
+
+`참고사항`
+- 1인 Full Stack 개발
+- 구현 내용
+    - 게시판 생성 / 삭제 / 이름 수정
+        - 이름 수정의 경우 특정 버튼을 누르면 모달 창을 띄워 수정하는 방식으로 진행
+        - 게시판 삭제 시 게시글 전부가 삭제 되도록 구현
+    
+    - 게시글 생성 / 삭제 / 수정
+        - 게시글 수정 및 삭제의 경우 작성자 본인이 아니면 버튼이 보이지 않게끔 구현
+        - 게시글 생성은 현재 존재하는 게시판 중 한 곳을 지정해야만 작성 가능
+
+`개발기간` 2022.12.19~12.20    
+
+`사용 기술스택`
+
+| 담당 |기술스택|
+|------|---|
+|Front-end | JSP/JQuery |
+|Back-end|Spring(Java)/Mybatis|
+|Database|Oracle|
+
 

@@ -11,6 +11,7 @@
 ###  - [1208 설명](#1208)    
 ### - [Sign_up_backup 설명](#sign_up_backup)    
 ### - [동적게시판 프로젝트 설명](#Dynamic-Board-Project)
+### - [CMS 프로젝트 설명](#CMS_Project)
 
 ---
 
@@ -127,4 +128,31 @@
 |Back-end|Spring(Java)/Mybatis|
 |Database|Oracle|
 
+---
 
+#### CMS_Project
+
+[해당 레포지토리로 이동](https://github.com/ssook1222/Study-for-survival/tree/master/CMS_Project/src/main)
+
+`소개`    
+Contents Management System 개발 프로젝트
+
+
+`참고사항`
+- 1인 Full Stack 개발
+- 구현 내용
+    - 회원가입 / 로그인
+    - 게시판 생성 / 삭제 / 이름 수정
+    - 게시글 생성 / 삭제 / 수정
+    - 회원 그룹 수정 / 삭제
+    - 회원 닉네임 수정 / 삭제
+
+`개발기간` 2022.12.21~12.27
+
+`사용 기술스택`
+
+| 담당 |기술스택|
+|------|---|
+|Front-end | JSP/JQuery |
+|Back-end|Spring(Java)/Mybatis|
+|Database|Oracle|

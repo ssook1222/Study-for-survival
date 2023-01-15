@@ -132,7 +132,7 @@
 
 #### CMS_Project
 
-[해당 레포지토리로 이동](https://github.com/ssook1222/Study-for-survival/tree/master/CMS_Project/src/main)
+[해당 레포지토리로 이동](https://github.com/ssook1222/Study-for-survival/tree/master/CMS_Project)
 
 `소개`    
 Contents Management System 개발 프로젝트
